@@ -34,6 +34,8 @@ import urllib.error
 SEASON = dt.datetime.now(dt.timezone.utc).year
 BASE = f"https://fantasy-api.formula1.com/partner_games/f1/{SEASON}"
 UA = "apex-f1-fantasy price sync (personal, low-frequency)"
+print("PLAYERS_URL =", PLAYERS_URL)
+print("TEAMS_URL =", TEAMS_URL)
 
 # Candidate field names — the script tries each in order. Adjust after --debug.
 PRICE_KEYS = ["current_price", "price", "cost", "value", "price_now"]
