@@ -32,7 +32,7 @@ import urllib.request
 import urllib.error
 
 SEASON = dt.datetime.now(dt.timezone.utc).year
-BASE = f"https://fantasy-api.formula1.com/f1/{SEASON}"
+BASE = f"https://fantasy-api.formula1.com/partner_games/f1/{SEASON}"
 UA = "apex-f1-fantasy price sync (personal, low-frequency)"
 
 # Candidate field names — the script tries each in order. Adjust after --debug.
@@ -55,7 +55,9 @@ CON_CODES = {
 
 
 def fetch(path):
-    req = urllib.request.Request(f"{BASE}/{path}", headers={"User-Agent": UA})
+    url = f"{BASE}/{path}"
+    print(f"Fetching {url}", file=sys.stderr)
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=25) as r:
         return json.load(r)
 
