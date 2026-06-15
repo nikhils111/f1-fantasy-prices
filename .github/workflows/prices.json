@@ -1,0 +1,16 @@
+{
+  "season": 2026,
+  "updated": "2026-06-15",
+  "_comment": "SAMPLE prices for testing the app's URL sync. Replace with scraper output (these are illustrative, not official).",
+  "drivers": {
+    "NOR": 29.5, "PIA": 28.5, "VER": 28.0, "LEC": 24.0, "RUS": 22.5,
+    "HAM": 21.0, "ANT": 15.5, "SAI": 14.0, "ALB": 13.5, "ALO": 12.0,
+    "HAD": 11.5, "PER": 10.5, "OCO": 9.5, "HUL": 9.0, "GAS": 9.0,
+    "STR": 8.5, "BEA": 8.0, "BOT": 8.0, "LAW": 7.5, "COL": 7.0,
+    "LIN": 7.0, "BOR": 6.5
+  },
+  "constructors": {
+    "MCL": 30.0, "FER": 23.5, "RBR": 22.5, "MER": 22.0, "WIL": 13.5,
+    "AST": 11.0, "AUD": 9.5, "HAA": 9.0, "ALP": 8.5, "RB": 8.0, "CAD": 7.5
+  }
+}
