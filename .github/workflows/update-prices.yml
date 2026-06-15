@@ -18,6 +18,24 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Show Python and network info
+        run: |
+          python --version
+          python - <<'PY'
+          import socket
+          hosts = [
+              "fantasy-api.formula1.com",
+              "fantasy.formula1.com",
+              "api.formula1.com",
+              "formula1.com"
+          ]
+          for host in hosts:
+              try:
+                  print(host, socket.gethostbyname(host))
+              except Exception as e:
+                  print(host, "FAILED:", e)
+          PY
+
       - name: Run scraper with debug
         run: python scrape_prices.py --debug
 
