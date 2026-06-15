@@ -18,8 +18,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Scrape prices
-        run: python scrape_prices.py
+      - name: Run scraper with debug
+        run: python scrape_prices.py --debug
 
       - name: Commit if changed
         run: |
